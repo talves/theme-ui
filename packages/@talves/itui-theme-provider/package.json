@@ -1,0 +1,23 @@
+{
+  "name": "@talves/itui-theme-provider",
+  "version": "0.3.0-alpha.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "prepare": "microbundle --no-compress",
+    "watch": "microbundle watch --no-compress"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.0",
+    "@talves/itui-core": "^0.3.0-alpha.0",
+    "@talves/itui-color-modes": "^0.3.0-alpha.0",
+    "@theme-ui/core": "^0.3.0-alpha.0",
+    "@theme-ui/mdx": "^0.3.0-alpha.0"
+  },
+  "repository": "system-ui/theme-ui",
+  "author": "Tony Alves",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

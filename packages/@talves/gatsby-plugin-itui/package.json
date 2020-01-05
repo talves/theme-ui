@@ -1,0 +1,19 @@
+{
+  "name": "@talves/gatsby-plugin-itui",
+  "version": "0.3.0-alpha.0",
+  "main": "index.js",
+  "author": "Tony Alves",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^2.18.17",
+    "@talves/itui": "^0.3.0-alpha.0"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "theme-ui"
+  ],
+  "repository": "system-ui/theme-ui",
+  "gitHead": "5681b24d36f81fddd0d1d82cbb85136cc15dcd4c"
+}
