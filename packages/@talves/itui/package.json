@@ -6,7 +6,12 @@
   "module": "dist/index.esm.js",
   "author": "Tony Alves",
   "license": "MIT",
-  "repository": "@talves/system-ui/theme-ui",
+  "repository": "talves/theme-ui",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "scripts": {
     "prepare": "microbundle --no-compress",
     "watch": "microbundle watch --no-compress"

@@ -7,7 +7,12 @@
     "prepare": "microbundle --no-compress",
     "watch": "microbundle watch --no-compress"
   },
-  "repository": "system-ui/theme-ui",
+  "repository": "talves/theme-ui",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "author": "Tony Alves",
   "license": "MIT",
   "publishConfig": {
