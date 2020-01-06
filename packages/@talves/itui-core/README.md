@@ -1,18 +1,26 @@
 
-# @theme-ui/core
+# @talves/itui-core
 
-Core Emotion and JSX implementation for Theme UI
+Core Emotion and JSX implementation for Theme UI uses an isolated context to return 
 
-**Note:** *This package is included in the main `theme-ui` package, and generally should not be used on its own.*
+**Note:** *This package is included in the main `itui` package, and generally should not be used on its own.*
 
 ```sh
-npm i @theme-ui/core
+yarn add @talves/itui-core
 ```
 
 ## API
 
-- `jsx`
-- `Context`
-- `useThemeUI`
-- `merge`
 - `ThemeProvider`
+- `createThemeProvider`
+
+```js
+const IsolatedContext = createContext() // 
+const {
+  Context,
+  ThemeProvider,
+  useIsolatedThemeUI,
+  ColorModeProvider,
+  useColorMode,
+} = createThemeProvider(IsolatedContext)
+```

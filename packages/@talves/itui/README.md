@@ -69,12 +69,17 @@ wrap your application with the `ThemeProvider` component and pass in a custom `t
 ```jsx
 // basic usage
 import React from 'react'
-import { ThemeProvider } from 'theme-ui'
+import { createThemeProvider, createContext } from '@talves/itui'
 import theme from './theme'
 
-export default props => (
-  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
-)
+const Context = createContext()
+
+export default ({ children, IsolatedContext=Context }) => {
+  const { ThemeProvider } = createThemeProvider(IsolatedContext)
+  return(
+    <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+  )
+}
 ```
 
 The `theme` object follows the System UI [Theme Specification](/theme-spec),
@@ -108,7 +113,7 @@ This means you can control which modules in your application opt into this featu
 
 ```jsx
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from '@talves/itui'
 
 export default props => (
   <div
@@ -131,7 +136,7 @@ This API originated in [Styled System][] and is intended as [a terser syntax for
 
 ```jsx
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from '@talves/itui'
 
 export default props => (
   <div

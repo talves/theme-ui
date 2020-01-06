@@ -1,15 +1,17 @@
-# gatsby-plugin-theme-ui
+# @talves/gatsby-plugin-itui
 
-Gatsby plugin for adding Theme UI context
+Gatsby plugin for adding Theme UI context provider with shared isolated ui
+
+**Note: ** this is more of an example of a simple plugin to use `@talves/itui`
 
 ```sh
-npm i theme-ui gatsby-plugin-theme-ui
+yarn add @talves/itui @talves/gatsby-plugin-itui
 ```
 
 ```js
 // gatsby-config.js
 module.exports = {
-  plugins: ['gatsby-plugin-theme-ui'],
+  plugins: ['@talves/gatsby-plugin-itui'],
 }
 ```
 
@@ -21,10 +23,10 @@ It **does not** apply default typographic styles in your application. See the [`
 ## Customizing the theme
 
 To customize the theme used in your Gatsby site,
-shadow the `src/gatsby-plugin-theme-ui/index.js` module.
+shadow the `src/@talves/gatsby-plugin-itui/index.js` module.
 
 ```js
-// src/gatsby-plugin-theme-ui/index.js
+// src/@talves/gatsby-plugin-itui/index.js
 export default {
   colors: {
     text: '#111',
@@ -32,60 +34,3 @@ export default {
   },
 }
 ```
-
-## Extending a theme
-
-To extend a Gatsby theme that uses Theme UI, import the base theme and export a new theme object.
-
-```js
-// src/gatsby-plugin-theme-ui/index.js
-import baseTheme from 'gatsby-theme-blog/src/gatsby-plugin-theme-ui'
-
-export default {
-  ...baseTheme,
-  colors: {
-    ...baseTheme.colors,
-    text: '#111',
-    background: '#fff',
-  },
-}
-```
-
-You can also import and use presets from [@theme-ui/presets](https://theme-ui.com/presets) to use as a starting point.
-
-## Color Modes
-
-To enable support for multiple color modes, add a nested `modes` object to `theme.colors`.
-
-```js
-// src/gatsby-plugin-theme-ui/index.js
-export default {
-  colors: {
-    text: '#000',
-    background: '#fff',
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-      },
-    },
-  },
-}
-```
-
-## Components
-
-Custom MDX components that will receive styles from the theme can be included by adding a `src/gatsby-plugin-theme-ui/components.js` module.
-
-```js
-// src/gatsby-plugin-theme-ui/components.js
-export default {
-  h1: props => (
-    <h1 {...props}>
-      <a href={`#${props.id}`}>{props.children}</a>
-    </h1>
-  ),
-}
-```
-
-MIT License

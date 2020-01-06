@@ -1,30 +1,41 @@
 
-# @theme-ui/color-modes
+# @talves/itui-color-modes
 
 Adds support for user-controlled color modes
 
-**Note:** *This package is included in the main `theme-ui` package, and generally should not be used on its own.*
+**Note:** *This package is included in the main `itui` package, and generally should not be used on its own.*
 
 ```sh
 npm i @theme-ui/color-modes
 ```
 
 ```jsx
-import { ThemeProvider } from '@theme-ui/core'
-import { ColorModeProvider } from '@theme-ui/color-modes'
+import { createThemeProvider } from '@theme-ui/core'
+import { createColorModeProvider } from '@theme-ui/color-modes'
 import theme from './theme'
 
-export default props =>
-  <ThemeProvider theme={theme}>
-    <ColorModeProvider>
-      {props.children}
-    </ColorModeProvider>
-  </ThemeProvider>
+export default ({ children, IsolatedContext }) => {
+  const { ThemeProvider } = createThemeProvider(
+    IsolatedContext
+  )
+  const { ColorModeProvider } = createColorModeProvider(
+    IsolatedContext
+  )
+
+  return (
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+        {children}
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+}
 ```
 
 ## API
 
-- `useColorMode`
-- `ColorModeProvider`
 - `InitializeColorMode`
+- `createColorModeProvider`
+    - `useColorMode`
+    - `ColorModeProvider`
 
