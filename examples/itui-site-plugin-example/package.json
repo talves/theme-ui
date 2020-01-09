@@ -11,14 +11,16 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.0.19",
-    "@mdx-js/react": "^1.0.16",
+    "@mdx-js/mdx": "^1.5.3",
+    "@mdx-js/react": "^1.5.3",
     "@talves/itui": "^0.3.0-alpha.0",
-    "@talves/gatsby-plugin-itui": "^0.3.0-alpha.0",
+    "@talves/gatsby-theme-isolated-core": "^0.3.0-alpha.0",
+    "@talves/gatsby-theme-a": "^0.3.0-alpha.0",
+    "@talves/gatsby-theme-b": "^0.3.0-alpha.0",
     "gatsby": "^2.18.7",
-    "gatsby-plugin-mdx": "^1.0.4",
+    "gatsby-plugin-mdx": "^1.0.64",
     "react": "^16.12.0",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@testing-library/react": "^9.1.3",

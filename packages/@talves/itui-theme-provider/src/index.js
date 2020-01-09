@@ -34,10 +34,7 @@ export const ThemeProvider = ({
   children,
   IsolatedContext,
 }) => {
-  const {
-    useIsolatedThemeUI,
-    ThemeProvider: CoreProvider,
-  } = createCoreThemeProvider({
+  const { ThemeProvider: CoreProvider } = createCoreThemeProvider({
     IsolatedContext,
   })
   const { ColorModeProvider } = createColorModeProvider({

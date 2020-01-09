@@ -2,7 +2,10 @@ import { jsx } from '@talves/itui-core'
 
 export { jsx, merge } from '@talves/itui-core'
 export { createThemeProvider } from '@talves/itui-theme-provider'
-export { createContext } from '@talves/itui-use-isolated-theme-context'
+export {
+  createContext,
+  useIsolatedThemeUI,
+} from '@talves/itui-use-isolated-theme-context'
 export { InitializeColorMode } from '@talves/itui-color-modes'
 export { Styled, components } from '@theme-ui/mdx'
 export { css, get } from '@theme-ui/css'

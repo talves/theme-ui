@@ -1,0 +1,7 @@
+## gatsby-theme-style-guide
+
+
+
+© ADARTA Inc. 2019  (**No License**)  
+
+This open source software has **No License** and owner reserves all rights. Owner reserves the right to change the license at any time or grant or deny a private license when requested. Unauthorized use, modification, or sharing of the software is unlawful for any purpose without prior written permission.

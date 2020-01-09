@@ -105,4 +105,4 @@ export const createThemeProvider = ({ IsolatedContext = Context }) => {
   }
 }
 
-export { Context }
+export { Context, useIsolatedThemeUI }
